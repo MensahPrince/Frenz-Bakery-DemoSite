@@ -1,0 +1,51 @@
+    * {
+        font-family: Arial, sans-serif;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+    }
+    
+    .diplomata-sc-regular1 {
+        font-family: "Diplomata SC", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    nav {
+        background-color: #D2B48C;
+        padding: 4vh 2vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100vw;
+        height: 5vh;
+    }
+    
+    nav img {
+        width: 60px;
+        height: auto;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin-right: 3em;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    footer {
+        background-color: #D2B48C;
+        color: white;
+        text-align: center;
+        padding: 3vh 0;
+        max-width: 100vw;
+    }
