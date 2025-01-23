@@ -1,0 +1,34 @@
+{% extends "web/main.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frenz Bakery</title>
+    <link rel="stylesheet" href="{% static 'web/css/home.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% block content %}
+        <section class="hero">
+            <div class="sidebar-left">
+                <img src="{% static 'images/logo-image.png' %}" alt="Bakery">
+                <br>
+                <div class="left-content">
+                    <h2 class='diplomata-sc-regular'>YOUR TOP 1% GHANAIAN BAKERY</h2> <br> 
+                    <p class='diplomata-sc-regular1'>Lovingly crafted by our forefathers and refined through generations, we proudly present a timeless masterpiece. Rooted in tradition and inspired by royalty, every detail reflects the passion and dedication of those who came before us. Experience the essence of heritage, where every flavor tells a story of excellence passed down through the ages.</p>
+                    <br><br>
+                    <a href="{% url 'order' %}" class="btn">Order</a>
+
+                    <p><img  src="{% static 'images/locaton.png' %}" class="location-img"> &nbsp;Adenta, Accra, Ghana</p>
+                </div>
+                    
+            </div>
+        </section>
+    {% endblock %}
+</body>
+</html>
