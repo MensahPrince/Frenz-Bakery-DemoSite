@@ -1,6 +1,45 @@
 {% extends 'web/main.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Frenz Bakery</title>
+</head>
+<body>
+    {% block content %}
+        <section>
+        </section>
+        <section class='menu'>
+            {% for product in products %}
+                <div class="product">
+                    <div class='product-image'>
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}" />
 
-{% block content %}
-    <h1>Welcome to Our Stock</h1>
-    <p>Order your favorite baked goods today!</p>
-{% endblock content %}
+                        <div class='product-description'>
+                            <p>{{ product.description }}</p>
+                        </div>
+                         
+                    </div>
+
+                    <div class='product-details'> 
+                        <div class='product-name'>
+                            <h3>{{ product.name }}</h3>
+                        </div>
+                        <div class='stock-details'>
+                            <p>Price: GH₵ &nbsp;{{ product.price }}</p>
+                            {% if product.stock == 0 %}
+                                <p>Out of Stock</p>
+                            {% else %}
+                                <p>Stock: {{ product.stock }} pc(s) </p>
+                            {% endif %}
+                            <button class='order-btn'>Order</button>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    {% endblock  %}
+</body>
+</html>

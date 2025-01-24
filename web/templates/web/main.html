@@ -7,7 +7,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'web/main.css' %}">
     <link rel="stylesheet" href="{% static 'web/home.css' %}">
-    <link rel="stylesheet" href="{% static 'web/order.css' %}">
+    <link rel="stylesheet" href="{% static 'web/menu.css' %}">
 </head>
 <body>
     <nav >
@@ -15,8 +15,8 @@
             <img src="{% static 'images/nav-logo1.png' %}" alt="Bakery"></a>
         <ul>
             <li><a class="diplomata-sc-regular1" href="{% url 'home' %}">HOME</a></li>
-            <li><a class="diplomata-sc-regular1" href="{% url 'order' %}">ORDER</a></li>
             <li><a class="diplomata-sc-regular1" href="{% url 'menu' %}">MENU</a></li>
+            <li><a class="diplomata-sc-regular1" href="{% url 'order' %}">ORDER</a></li>
             <li><a class="diplomata-sc-regular1" href="{% url 'contact' %}">CONTACT</a></li>
             <li><a class="diplomata-sc-regular1" href="{% url 'about' %}">ABOUT</a></li>
         </ul>
