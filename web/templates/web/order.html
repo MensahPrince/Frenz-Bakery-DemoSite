@@ -1,16 +1,33 @@
 {% extends 'web/main.html' %}
-
-{% block content %}
-    <section>
-        <div>
-            <img src="{{ product.image.url }}" alt="{{ product.name }}" />
-            <h2>{{ product.name }}</h2>
-            <p>Price: GH₵ &nbsp;{{ product.price }}</p>
-            {% if product.stock == 0 %}
-                <p>Out of Stock</p>
-            {% else %}
-                <p>Stock: {{ product.stock }} </p>
-            {% endif %}
-        </div>
-    </section>
-{% endblock content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Frenz Bakery</title>
+</head>
+<body>
+    {% block content %}
+        <section>
+        </section>
+        <section>
+            <p></p>
+            {% for product in products %}
+                <div class="product">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" />
+                    <div> 
+                        <h2>{{ product.name }}</h2>
+                            <p>Price: GH₵ &nbsp;{{ product.price }}</p>
+                        {% if product.stock == 0 %}
+                            <p>Out of Stock</p>
+                        {% else %}
+                            <p>Stock: {{ product.stock }} </p>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    {% endblock  %}
+</body>
+</html>
