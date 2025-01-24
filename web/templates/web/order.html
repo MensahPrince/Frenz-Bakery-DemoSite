@@ -2,6 +2,15 @@
 
 {% block content %}
     <section>
-        
+        <div>
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" />
+            <h2>{{ product.name }}</h2>
+            <p>Price: GH₵ &nbsp;{{ product.price }}</p>
+            {% if product.stock == 0 %}
+                <p>Out of Stock</p>
+            {% else %}
+                <p>Stock: {{ product.stock }} </p>
+            {% endif %}
+        </div>
     </section>
 {% endblock content %}
