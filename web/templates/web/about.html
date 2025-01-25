@@ -1,6 +1,29 @@
 {% extends 'web/main.html' %}
-
-{% block content %}
-    <h1>About Us</h1>
-    <p>Order your favorite baked goods today!</p>
-{% endblock content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Frenz Bakery</title>
+</head>
+<body>
+    {% block content %}
+    <section>
+        <h1>About Us</h1>
+        <p>Home / About Us </p>
+    <section>
+    <section>
+        <img src='' alt='About-us-image'/>
+        <h2>Our Story</h2>
+        <p>For over 100 years, our bakery has been crafting flavors that celebrate resilience, heritage, and joy. From the struggles of our forefathers to the triumph of independence, our creations honor a legacy passed through generations.  
+            
+            Experience the timeless taste of tradition, where every bite tells a story of passion and excellence..</p>
+    </section>
+    <section>
+        <h2>Special Orders</h2>
+        <p>At Frenz Bakery, we understand that every occasion is unique and special. That's why we offer custom orders tailored to your specific needs. Whether it's a birthday, wedding, or any other celebration, our team is dedicated to creating the perfect baked goods to make your event memorable. Contact us to discuss your requirements and let us bring your vision to life with our delicious and beautifully crafted treats.</p>
+    </section>
+    {% endblock %}
+</body>
+</html>
