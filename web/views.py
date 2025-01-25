@@ -9,7 +9,7 @@ def home(request):
 def menu(request):
     products = Product.objects.all()
     context = {'products': products}
-    return render(request, 'web/menu.html', context)
+    return render(request, 'web/menu.html', context)  
 
 def about(request):
     context={}
@@ -21,5 +21,6 @@ def contact(request):
 
 def order(request):
     #orders = Orders.objects.all()
+    #products = Product.objects.all()
     context = {}
     return render(request, 'web/order.html', context)

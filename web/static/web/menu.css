@@ -101,6 +101,7 @@
         margin-top: 10px;
         cursor: pointer;
         transition: background-color 0.3s;
+        text-decoration: none;
     }
     
     .order-btn:hover {

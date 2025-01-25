@@ -1,6 +1,16 @@
 {% extends 'web/main.html' %}
 
 {% block content %}
-    <h1>Order Our Stock</h1>
-    <p>Order your favorite baked goods today!</p>
+    <section class="order-section">
+        <div class="product">
+            <div class="product-image">
+                <img src="{{ product.image }}" alt="{{ product.name }}">
+            </div>
+            <div class="product-info">
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                <p>Price: ${{ product.price }}</p>
+            </div>
+        </div>
+    <section>
 {% endblock content %}

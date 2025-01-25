@@ -34,7 +34,7 @@
                             {% else %}
                                 <p>Stock: {{ product.stock }} pc(s) </p>
                             {% endif %}
-                            <button class='order-btn'>Order</button>
+                            <a class='order-btn' href="{% url 'order' %}">Order</a>
                         </div>
                     </div>
                 </div>
